@@ -3,13 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ArticleComponent } from './article/article.component';
+import { ArticlesComponent } from './articles/articles.component';
 
-import { GamesComponent } from './games/games.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GamesComponent
+    ArticleComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,
@@ -18,4 +21,5 @@ import { GamesComponent } from './games/games.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
