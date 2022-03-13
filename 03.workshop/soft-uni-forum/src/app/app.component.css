@@ -1,0 +1,17 @@
+
+:host {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    
+    width: 100%;
+}
+
+aside {
+    width: 29%;
+    margin-top: 1em;
+    margin-left: 25px;
+    font-size: 0.8em;
+}
