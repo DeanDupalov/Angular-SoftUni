@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { ThemeListComponent } from './theme-list/theme-list.component';
 import { AsideComponent } from './aside/aside.component';
 import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
 import { UserService } from './user.service';
+import { ThemeService } from './theme.service';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { UserService } from './user.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
-    UserService
+    UserService, 
+    ThemeService
   ],
   bootstrap: [
     AppComponent,
