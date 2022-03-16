@@ -6,9 +6,7 @@ import {environment} from '../environments/environment';
 
 const apiUrl = environment.apiUrl;
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ThemeService {
 
   constructor(public http: HttpClient) { }

@@ -1,12 +1,11 @@
-export interface Iuser {
+import { IBase } from "./base";
+
+export interface Iuser extends IBase {
     themes: string[];
     post: string[];
-    _id: string;
     tel: string;
     email: string;
     username: string;
     password: string;
-    created_at: string;
-    updatedAt: string;
-    __v: number;
+
 }

@@ -11,6 +11,7 @@ import { AsideComponent } from './aside/aside.component';
 import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
 import { UserService } from './user.service';
 import { ThemeService } from './theme.service';
+import { PostService } from './post.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ThemeService } from './theme.service';
   ],
   providers: [
     UserService, 
-    ThemeService
+    ThemeService,
+    PostService
   ],
   bootstrap: [
     AppComponent,
