@@ -4,33 +4,33 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { ThemeListComponent } from './theme-list/theme-list.component';
-import { AsideComponent } from './aside/aside.component';
-import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
-import { UserService } from './user.service';
-import { ThemeService } from './theme.service';
-import { PostService } from './post.service';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { ThemesModule } from './feature/themes/themes.module';
+import { SharedModule } from './shared/shared.module';
+import { PagesModule } from './feature/pages/pages.module';
+import { RouterModule } from '@angular/router';
+import { CoreModule } from './core/core.module';
+import { AuthModule } from './auth/auth.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    ThemeListComponent,
-    AsideComponent,
-    ThemeListItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    CoreModule.forRoot(),
+    HttpClientModule,
+    RouterModule, 
+    ThemesModule,
+    SharedModule,
+    PagesModule,
+    AuthModule
   ],
   providers: [
-    UserService, 
-    ThemeService,
-    PostService
+  
   ],
   bootstrap: [
     AppComponent,
